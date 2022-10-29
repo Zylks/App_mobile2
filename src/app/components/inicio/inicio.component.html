@@ -1,0 +1,34 @@
+<br>
+
+
+
+
+<ion-content class="ion-padding-horizontal" [style.--background]="escaneando ? '#0000000':'#fff'">
+
+
+<ion-button class="scan-button2" shape="round" color="tertiary"  (click)="comenzarEscaneo()" [hidden]="escaneando">
+  <ion-icon name="scan" slot="start"></ion-icon>
+  Escanear código QR
+</ion-button>
+
+<br> 
+<br>
+<p class="ion-text-center" *ngIf="result && !escaneando">{{result}}</p>
+
+
+
+<ion-button class="scan-button" shape="round"  color="tertiary"  (click)="detenerEscaneo()" [hidden]="!escaneando">
+  <ion-icon name="stop" slot="start"></ion-icon>
+  Detener escaneo de código QR
+</ion-button> 
+  
+
+<div class="scan-box" [hidden]="!escaneando" >
+</div>
+</ion-content>
+
+
+
+
+
+  
